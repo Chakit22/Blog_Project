@@ -1,0 +1,9 @@
+<%- include("partials/header.ejs") -%>
+    <h1>Home</h1>
+    <p><%= startingContent %></p>
+    <% posts_home.forEach((ele) => { %>
+    <h1><%= ele.postTitle %></h1>
+    <p><%= ele.postBody.substr(0,10) + "..." %> <a href="/posts/<%= ele._id %>">Read More</a></p>
+    <% }); %>
+    
+<%- include("partials/footer.ejs") -%>
